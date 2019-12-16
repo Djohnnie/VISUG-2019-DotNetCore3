@@ -1,0 +1,2 @@
+# VISUG-2019-DotNetCore3
+Material for the VISUG session "WHAT IS NEW IN .NET CORE 3 AND THE FUTURE OF .NET"
