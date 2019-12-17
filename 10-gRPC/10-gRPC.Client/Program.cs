@@ -12,19 +12,19 @@ namespace _10_gRPC.Client
     {
         static async Task Main(string[] args)
         {
-            await Task.Delay(5000);
+            await Task.Delay(1000);
 
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new Sauna.SaunaClient(channel);
             var request = new SaunaRequest { TemperatureUnit = "C" };
+            
+            // Fetch a single value.
             var response = await client.FetchCurrentStateAsync(request);
-
             var timeStamp = DateTimeOffset.FromUnixTimeSeconds(response.TimeStamp);
+            WriteLine(
+                $"[{timeStamp:T}] <{(response.IsInfraRed ? "I" : " ")}> <{(response.IsDrySauna ? "S" : " ")}> {response.Temperature}°C");
 
-            WriteLine($"[{timeStamp:T}] <{(response.IsInfraRed ? "I" : " ")}> <{(response.IsDrySauna ? "S" : " ")}> {response.Temperature}°C");
-
-
-
+            // Fetch a stream of values.
             var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             using var streamingCall = client.FetchStateStream(request, cancellationToken: cts.Token);
 
@@ -41,6 +41,8 @@ namespace _10_gRPC.Client
             {
                 WriteLine("Stream cancelled.");
             }
+
+            ReadKey();
         }
     }
 }

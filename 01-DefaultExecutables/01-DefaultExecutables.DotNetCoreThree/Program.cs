@@ -11,7 +11,7 @@ namespace _01_DefaultExecutables.DotNetCoreThree
             // templates. Class libraries and web applications
             // will only produce *.dll executables.
 
-            ConsoleHelper.Go();
+            ConsoleHelper.Go("Default Executables on .NET Core 3.1");
         }
     }
 }

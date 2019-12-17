@@ -60,7 +60,6 @@ namespace _12_WindowsDesktop.WinForms
             }
 
             _previousLocation = new Point(e.X, e.Y);
-
         }
     }
 }

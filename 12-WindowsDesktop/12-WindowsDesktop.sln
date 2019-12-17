@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-WindowsDesktop.gRPC.Server", "12-WindowsDesktop.gRPC.Server\12-WindowsDesktop.gRPC.Server.csproj", "{92D9AA32-AC8C-4A26-B2B9-35606424DBAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-WindowsDesktop.gRPC.Server", "12-WindowsDesktop.gRPC.Server\12-WindowsDesktop.gRPC.Server.csproj", "{92D9AA32-AC8C-4A26-B2B9-35606424DBAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-WindowsDesktop.WinForms", "12-WindowsDesktop.WinForms\12-WindowsDesktop.WinForms.csproj", "{3D0BD03E-1101-41CB-AF45-EE0E3756F383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-WindowsDesktop.WinForms", "12-WindowsDesktop.WinForms\12-WindowsDesktop.WinForms.csproj", "{3D0BD03E-1101-41CB-AF45-EE0E3756F383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-WindowsDesktop.WPF", "12-WindowsDesktop.WPF\12-WindowsDesktop.WPF.csproj", "{76AB2370-47BD-4CF3-B8EA-473A605DE914}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3D0BD03E-1101-41CB-AF45-EE0E3756F383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0BD03E-1101-41CB-AF45-EE0E3756F383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0BD03E-1101-41CB-AF45-EE0E3756F383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76AB2370-47BD-4CF3-B8EA-473A605DE914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76AB2370-47BD-4CF3-B8EA-473A605DE914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76AB2370-47BD-4CF3-B8EA-473A605DE914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76AB2370-47BD-4CF3-B8EA-473A605DE914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

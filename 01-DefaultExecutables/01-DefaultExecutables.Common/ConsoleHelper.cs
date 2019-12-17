@@ -7,9 +7,9 @@ namespace _01_DefaultExecutables.Common
 {
     public static class ConsoleHelper
     {
-        public static void Go()
+        public static void Go(string title)
         {
-            WriteLine("Default Executables on .NET Core 2.2");
+            WriteLine(title);
             WriteLine("------------------------------------");
             WriteLine();
 

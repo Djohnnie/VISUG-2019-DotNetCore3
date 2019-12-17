@@ -9,8 +9,8 @@ namespace _03_AssemblyLinking
     {
         static void Main(string[] args)
         {
-            WriteLine("Default Executables on .NET Core 2.2");
-            WriteLine("------------------------------------");
+            WriteLine("Assembly Linking on .NET Core 3.1");
+            WriteLine("---------------------------------");
             WriteLine();
 
             string path = Assembly.GetExecutingAssembly().Location;

@@ -15,32 +15,35 @@ namespace _08_HardwareIntrinsics
             WriteLine("Getting a billion integers...");
             var source = new ReadOnlySpan<int>(Enumerable.Range(0, 1073741824).ToArray());
 
-            Write("Calculating a regular sum... ");
-            var sw1 = Stopwatch.StartNew();
-            _ = Sum(source);
-            sw1.Stop();
-            WriteLine($"{sw1.ElapsedMilliseconds}ms");
+            for (int i = 0; i < 3; i++)
+            {
+                Write("Calculating a regular sum... ");
+                var sw1 = Stopwatch.StartNew();
+                _ = Sum(source);
+                sw1.Stop();
+                WriteLine($"{sw1.ElapsedMilliseconds}ms");
 
-            Write("Calculating a sum with SIMD support... ");
-            var sw2 = Stopwatch.StartNew();
-            _ = SumVectorT(source);
-            sw2.Stop();
-            WriteLine($"{sw2.ElapsedMilliseconds}ms");
+                Write("Calculating a sum with SIMD support... ");
+                var sw2 = Stopwatch.StartNew();
+                _ = SumVectorT(source);
+                sw2.Stop();
+                WriteLine($"{sw2.ElapsedMilliseconds}ms");
 
-            Write("Calculating a sum with Hardware Intrinsics support... ");
-            var sw3 = Stopwatch.StartNew();
-            _ = SumVectorized(source);
-            sw3.Stop();
-            WriteLine($"{sw3.ElapsedMilliseconds}ms");
+                Write("Calculating a sum with Hardware Intrinsics support... ");
+                var sw3 = Stopwatch.StartNew();
+                _ = SumVectorized(source);
+                sw3.Stop();
+                WriteLine($"{sw3.ElapsedMilliseconds}ms");
+            }
         }
 
         static int Sum(ReadOnlySpan<int> source)
         {
             int result = 0;
 
-            for (int i = 0; i < source.Length; i++)
+            foreach (var number in source)
             {
-                result += source[i];
+                result += number;
             }
 
             return result;

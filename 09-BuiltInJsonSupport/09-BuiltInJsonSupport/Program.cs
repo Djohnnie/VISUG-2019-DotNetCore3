@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using FizzWare.NBuilder;
 using Newtonsoft.Json;
 using static System.Console;
@@ -13,8 +12,6 @@ namespace _09_BuiltInJsonSupport
     {
         static void Main(string[] args)
         {
-            Task.Run(() => WriteLine(5));
-
             WriteLine("Preparing data...");
 
             var data = Builder<DataPoint>.CreateListOfSize(10)
@@ -26,7 +23,7 @@ namespace _09_BuiltInJsonSupport
                 .With(p => p.RightData = GenerateDataPoint(0))
                 .Build();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
                 var sw1 = Stopwatch.StartNew();
                 string newtonsoftJson = JsonConvert.SerializeObject(data);
@@ -60,7 +57,7 @@ namespace _09_BuiltInJsonSupport
                 {
                     Id = Guid.NewGuid(),
                     Title = Faker.Identification.UKNationalInsuranceNumber(),
-                    Description = Faker.Lorem.Sentence(100),
+                    Description = Faker.Lorem.Sentence(10),
                     LeftData = GenerateDataPoint(level + 1),
                     RightData = GenerateDataPoint(level + 1)
                 };

@@ -10,7 +10,7 @@ namespace _01_DefaultExecutables.DotNetCoreTwo
             // *.dll executables that need to be executed using the
             // dotnet command.
 
-            ConsoleHelper.Go();
+            ConsoleHelper.Go("Default Executables on .NET Core 2.2");
         }
     }
 }
