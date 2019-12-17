@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "_11_WorkerService.Linux": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

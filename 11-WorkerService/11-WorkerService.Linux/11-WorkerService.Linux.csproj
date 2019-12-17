@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-_11_WorkerService.Linux-EE00858A-022E-48AA-8DC2-019EC495CD48</UserSecretsId>
+    <RootNamespace>_11_WorkerService.Linux</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="3.1.0" />
+  </ItemGroup>
+</Project>

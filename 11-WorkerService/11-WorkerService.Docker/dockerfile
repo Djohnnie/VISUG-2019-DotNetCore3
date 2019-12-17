@@ -1,0 +1,12 @@
+﻿FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the app
+COPY bin/Release/publish /app
+
+ENV TZ=Europe/Brussels
+
+# Start the app
+ENTRYPOINT ["dotnet", "11-WorkerService.Docker.dll"]
